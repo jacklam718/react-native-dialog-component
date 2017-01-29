@@ -10,6 +10,6 @@
     "exponent": "~11.0.2",
     "react": "~15.3.2",
     "react-native": "git+https://github.com/exponentjs/react-native#sdk-11.0.3",
-    "react-native-popup-dialog-v2": "file:../"
+    "react-native-dialog-component": "file:../"
   }
 }
