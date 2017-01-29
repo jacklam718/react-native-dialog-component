@@ -1,7 +1,7 @@
 {
-  "name": "material-dialog-example",
+  "name": "dialog-component-example",
   "description": "An empty new project",
-  "slug": "material-dialog-example",
+  "slug": "dialog-component-example",
   "sdkVersion": "11.0.0",
   "version": "1.0.0",
   "orientation": "portrait",
