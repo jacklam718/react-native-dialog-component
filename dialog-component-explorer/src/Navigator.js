@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Navigator, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import DialogComponent, { DialogContent } from 'react-native-dialog-component';
+import _ from 'lodash';
 
 import DialogExplorer from './DialogExplorer';
 import AutoDialogSize from './containers/AutoDialogSize';
@@ -23,7 +24,10 @@ export default class EXNavigator extends Component {
   }
 
   onUpdateSettings(dialogSettings) {
-    this.setState({ dialogSettings });
+    this.setState({ dialogSettings: {
+      ...this.state.dialogSettings,
+      ...dialogSettings,
+    } });
   }
 
   openDialogComponent() {
@@ -45,7 +49,12 @@ export default class EXNavigator extends Component {
     // if (route.name === 'fixedDialogSize') {
     //   return <FixedDialogSize navigator={navigator} />;
     // }
-    return <DialogExplorer navigator={navigator} openDialog={this.openDialogComponent} />;
+    return (
+      <DialogExplorer
+        navigator={navigator}
+        openDialog={this.openDialogComponent}
+      />
+    );
   }
 
   render() {
@@ -93,7 +102,6 @@ export default class EXNavigator extends Component {
     );
 
     const dialogSettings = this.state.dialogSettings;
-
     const dialogComponentContent = dialogSettings.dialogContentContainer ? (
       <DialogContent>
         <Text>
@@ -125,6 +133,7 @@ export default class EXNavigator extends Component {
         <SettingsDialog
           // {...this.state}
           onSettingsUpdated={this.onUpdateSettings}
+          onViewSettings={this.openViewSettingsDialog}
           ref={(settingsDialog) => {
             this.settingsDialog = settingsDialog;
           }}

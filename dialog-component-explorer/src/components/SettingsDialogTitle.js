@@ -1,13 +1,14 @@
 // @flow
 
 import React, { Component } from 'react';
-import { View, Text, Switch } from 'react-native';
+import { View, Text, Switch, Picker } from 'react-native';
 import _ from 'lodash';
 import Section from './Section';
 
 type Props = {
   onSettingsUpdated: Function;
   haveTitleBar: boolean;
+  titleAlign: string,
 }
 
 export default class SettingsDialogTitle extends Component {
@@ -16,6 +17,7 @@ export default class SettingsDialogTitle extends Component {
   static defaultProps = {
     onSettingsUpdated: () => null,
     haveTitleBar: false,
+    titleAlign: 'center',
   }
 
   constructor(props) {
@@ -23,9 +25,11 @@ export default class SettingsDialogTitle extends Component {
 
     this.state = {
       haveTitleBar: props.haveTitleBar,
+      titleAlign: props.titleAlign,
     };
 
     this.dialogTitleBarSwitch = this.dialogTitleBarSwitch.bind(this);
+    this.dialogTitleAlignPickerChange = this.dialogTitleAlignPickerChange.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -38,12 +42,10 @@ export default class SettingsDialogTitle extends Component {
 
   dialogTitleBarSwitch(value) {
     this.setState({ haveTitleBar: value });
-    if (value) {
-      this.setState({
-        dialogWidth: null,
-        dialogHeight: null,
-      });
-    }
+  }
+
+  dialogTitleAlignPickerChange(value) {
+    this.setState({ titleAlign: value });
   }
 
   render() {
@@ -56,6 +58,19 @@ export default class SettingsDialogTitle extends Component {
           />
           <Text>
             Title Bar: {`${this.state.haveTitleBar}`}
+          </Text>
+        </View>
+        <View>
+          <Picker
+            selectedValue={this.state.titleAlign}
+            onValueChange={this.dialogTitleAlignPickerChange}
+          >
+            <Picker.Item label="left" value="left" />
+            <Picker.Item label="right" value="right" />
+            <Picker.Item label="center" value="center" />
+          </Picker>
+          <Text>
+            Dialog Animation: {`${this.state.titleAlign}`}
           </Text>
         </View>
       </Section>
