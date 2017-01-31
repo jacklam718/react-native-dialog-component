@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import DialogComponent, { DialogContent } from 'react-native-dialog-component';
 
-import Button from '../Button';
+import Button from '../components/Button';
 
 export default class FixedDialogSize extends Component {
 

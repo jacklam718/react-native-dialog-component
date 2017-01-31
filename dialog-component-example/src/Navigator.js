@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Navigator, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import DialogComponent, { DialogContent } from 'react-native-dialog-component';
 
 import DialogExplorer from './DialogExplorer';
 import AutoDialogSize from './containers/AutoDialogSize';
@@ -11,7 +12,22 @@ export default class EXNavigator extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      dialogSettings: {},
+    };
+
+    this.renderScene = this.renderScene.bind(this);
+    this.onUpdateSettings = this.onUpdateSettings.bind(this);
     this.openSettingsDialog = this.openSettingsDialog.bind(this);
+    this.openDialogComponent = this.openDialogComponent.bind(this);
+  }
+
+  onUpdateSettings(dialogSettings) {
+    this.setState({ dialogSettings });
+  }
+
+  openDialogComponent() {
+    this.dialogComponent.openDialog();
   }
 
   openSettingsDialog() {
@@ -29,8 +45,7 @@ export default class EXNavigator extends Component {
     // if (route.name === 'fixedDialogSize') {
     //   return <FixedDialogSize navigator={navigator} />;
     // }
-
-    return <DialogExplorer navigator={navigator} />;
+    return <DialogExplorer navigator={navigator} openDialog={this.openDialogComponent} />;
   }
 
   render() {
@@ -77,6 +92,20 @@ export default class EXNavigator extends Component {
       />
     );
 
+    const dialogSettings = this.state.dialogSettings;
+
+    const dialogComponentContent = dialogSettings.dialogContentContainer ? (
+      <DialogContent>
+        <Text>
+          Hello
+        </Text>
+      </DialogContent>
+    ) : (
+      <Text>
+        Hello
+      </Text>
+    );
+
     return (
       <View style={{ flex: 1 }}>
         <Navigator
@@ -84,14 +113,33 @@ export default class EXNavigator extends Component {
             name: 'index',
             title: 'Dialog Explorer',
           }}
+          ref={(navigator) => {
+            this.navigator = navigator;
+          }}
           navigationBar={navigationBar}
           renderScene={this.renderScene}
           configureScene={this.configureScene}
           style={styles.navigator}
         />
+
         <SettingsDialog
-          ref={settingsDialog => this.settingsDialog = settingsDialog}
+          // {...this.state}
+          onSettingsUpdated={this.onUpdateSettings}
+          ref={(settingsDialog) => {
+            this.settingsDialog = settingsDialog;
+          }}
         />
+
+        <DialogComponent
+          title="Dialog"
+          titleAlign="center"
+          {...dialogSettings}
+          ref={(dialogComponent) => {
+            this.dialogComponent = dialogComponent;
+          }}
+        >
+          {dialogComponentContent}
+        </DialogComponent>
       </View>
     );
   }

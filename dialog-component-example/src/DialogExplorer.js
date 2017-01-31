@@ -2,13 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { View, ScrollView, StyleSheet, Text } from 'react-native';
 import DialogComponent from 'react-native-dialog-component';
 
-import Button from './Button';
+import Button from './components/Button';
 
 export default class DialogExplorer extends Component {
-  openDialog = () => {
-    this.dialog.openDialog();
-  };
-
   render() {
     return (
       <View style={{ backgroundColor: '#fff', flex: 1 }}>
@@ -21,22 +17,10 @@ export default class DialogExplorer extends Component {
             <Button
               style={styles.buttonStyle}
               text="Open Dialog"
-              onPress={this.openDialog}
+              onPress={this.props.openDialog}
             />
           </View>
         </ScrollView>
-
-        <DialogComponent
-          title="Dialog"
-          titleAlign="center"
-          width={null}
-          height={null}
-          ref={dialog => this.dialog = dialog}
-        >
-          <Text>
-            Hello
-          </Text>
-        </DialogComponent>
       </View>
     );
   }
