@@ -1,0 +1,18 @@
+{
+  "name": "dialog-component-example",
+  "version": "0.0.0",
+  "description": "Hello Exponent!",
+  "author": null,
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "@exponent/vector-icons": "~4.0.0",
+    "exponent": "^13.1.0",
+    "react": "~15.4.0",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-13.0.3.tar.gz",
+    "react-native-dialog-component": "file:///Users/jacklam/Desktop/react-native-dialog-component",
+    "react-native-popup-dialog": "git+https://github.com/jacklam718/react-native-popup-dialog.git#master",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0"
+  }
+}
