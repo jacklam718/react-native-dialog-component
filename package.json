@@ -36,6 +36,6 @@
     "eslint-plugin-react": "^6.2.0"
   },
   "dependencies": {
-    "react-native-popup-dialog": "git://github.com/jacklam718/react-native-popup-dialog.git#dialog-size"
+    "react-native-popup-dialog": "^0.4.16"
   }
 }
