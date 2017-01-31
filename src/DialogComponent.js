@@ -43,7 +43,7 @@ class DialogComponent extends Component {
   render() {
     let { title, children } = this.props;
 
-    if (title && typeof title !== 'function') {
+    if (title && typeof title === 'string') {
       title = (
         <DialogTitle {...this.props} />
       );
