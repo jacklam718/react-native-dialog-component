@@ -1,19 +1,24 @@
+// @flow
+
 import React, { Component, PropTypes } from 'react';
-import { StyleSheet } from 'react-native';
-import PopupDialog, { Dialog, DialogTitle, DialogButton } from 'react-native-popup-dialog';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import PopupDialog, { Dialog } from 'react-native-popup-dialog';
+
+import DialogTitle from './components/DialogTitle';
+
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
 const propTypes = {
   ...Dialog.propTypes,
   ...DialogTitle.propTypes,
+  dialogContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
 };
 
 const defaultProps = {
   animationDuration: 200,
   closeOnTouchOutside: true,
-  minWidth: 0.8,
-  maxWidth: 0.8,
-  minHeight: 0.1,
-  maxHeight: 0.4,
+  width: screenWidth,
+  height: null,
 };
 
 class DialogComponent extends Component {
@@ -36,28 +41,51 @@ class DialogComponent extends Component {
   }
 
   render() {
-    let title;
+    let { title, children } = this.props;
 
-    if (this.props.title) {
+    if (title && typeof title !== 'function') {
       title = (
-        <DialogTitle
-          title={this.props.title}
-          titleStyle={this.props.titleStyle}
-          titleTextStyle={this.props.titleTextStyle}
-          titleAlign={this.props.titleAlign}
-          haveTitleBar={false}
-        />
+        <DialogTitle {...this.props} />
       );
+    }
+
+    if (title && title.type && title.type.name === 'DialogTitle') {
+      if (children && children.type.name === 'DialogContent') {
+        const props = {
+          ...children.props,
+          contentStyle: [{ paddingTop: 0 }, children.props.contentStyle],
+        };
+
+        const content = children.props.children;
+
+        children = React.cloneElement(
+          children,
+          props,
+          content,
+        );
+      }
     }
 
     return (
       <PopupDialog
-        dialogStyle={styles.dialog}
         ref={popupDialog => { this.popupDialog = popupDialog; }}
-        {...this.props}
+        width={this.props.width}
+        height={this.props.height}
+        dialogAnimation={this.props.dialogAnimation}
+        dialogStyle={[styles.dialog, this.props.dialogStyle]}
+        animationDuration={this.props.animationDuration}
+        overlayPointerEvents={this.props.overlayPointerEvents}
+        overlayBackgroundColor={this.props.overlayBackgroundColor}
+        overlayOpacity={this.props.overlayOpacity}
+        closeOnTouchOutside={this.props.closeOnTouchOutside}
+        haveOverlay={this.props.haveOverlay}
+        open={this.props.open}
+        onOpened={this.props.onOpened}
+        onClosed={this.props.onClosed}
+        actions={this.props.actions}
       >
         {title}
-        {this.props.children}
+        {children}
       </PopupDialog>
     );
   }
@@ -76,6 +104,9 @@ const styles = StyleSheet.create({
       width: 1,
       height: 2,
     },
+  },
+  dialogContainer: {
+    flex: 1,
   },
 });
 
