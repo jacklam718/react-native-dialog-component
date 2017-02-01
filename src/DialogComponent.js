@@ -49,8 +49,8 @@ class DialogComponent extends Component {
       );
     }
 
-    if (title && title.type && title.type.name === 'DialogTitle') {
-      if (children && children.type.name === 'DialogContent') {
+    if (title && title.type && title.type.name === 'DialogTitle' && !title.props.haveTitleBar) {
+      if (children && children.type && children.type.name === 'DialogContent') {
         const props = {
           ...children.props,
           contentStyle: [{ paddingTop: 0 }, children.props.contentStyle],
