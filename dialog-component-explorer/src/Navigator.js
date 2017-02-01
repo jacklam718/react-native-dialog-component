@@ -102,17 +102,20 @@ export default class EXNavigator extends Component {
     );
 
     const dialogSettings = this.state.dialogSettings;
+
+    const content = (
+      <View>
+        <Text>
+          React Native Dialog Component
+        </Text>
+      </View>
+    );
+
     const dialogComponentContent = dialogSettings.dialogContentContainer ? (
       <DialogContent>
-        <Text>
-          Hello
-        </Text>
+        {content}
       </DialogContent>
-    ) : (
-      <Text>
-        Hello
-      </Text>
-    );
+    ) : content;
 
     return (
       <View style={{ flex: 1 }}>
