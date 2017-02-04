@@ -1,6 +1,11 @@
 ## React Native Dialog Component
 React Native Dialog Component for iOS & Android.
 
+<img src="https://jacklam718.github.io/react-native-dialog-component/img/screenshot-1.png" width="150">
+<img src="https://jacklam718.github.io/react-native-dialog-component/img/screenshot-2.png" width="150">
+<img src="https://jacklam718.github.io/react-native-dialog-component/img/screenshot-3.png" width="150">
+
+
 ## Try With Exponent
 [Exponent](https://exp.host/@jacklam718/dialog-component-explorer)
 

@@ -823,9 +823,9 @@ progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
 
-"react-native-popup-dialog@git://github.com/jacklam718/react-native-popup-dialog.git#dialog-size":
+react-native-popup-dialog@^0.4.16:
   version "0.4.16"
-  resolved "git://github.com/jacklam718/react-native-popup-dialog.git#2c85d3b2044715a601f401c38b12e4f42d088648"
+  resolved "https://registry.yarnpkg.com/react-native-popup-dialog/-/react-native-popup-dialog-0.4.16.tgz#2374a2b0baa6e379a0a5aa78688dba89b8934f38"
 
 readable-stream@~2.0.0:
   version "2.0.6"
