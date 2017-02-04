@@ -21,13 +21,14 @@ yarn add react-native-dialog-component
 
 1. Dialog
 2. DialogComponent
-3. DialogButton
-4. DialogTitle
-5. Overlay
-6. Animation
-7. DefaultAnimation
-8. ScaleAnimation
-9. SlideAnimation
+3. DialogContent
+4. DialogButton
+5. DialogTitle
+6. Overlay
+7. Animation
+8. DefaultAnimation
+9. ScaleAnimation
+10. SlideAnimation
 
 
 ## Examples
@@ -99,6 +100,30 @@ import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
 </View>
 ```
 
+## Usage - Wrape the content use DialogContent
+```javascript
+import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
+
+<View style={styles.container}>
+  <Button
+    text="Open Dialog"
+    onPress={() => {
+      this.dialogComponent.openDialog();
+    }}
+  />
+  <DialogComponent
+    dialogTitle={<DialogTitle title="Dialog Title" />}
+    ref={(dialogComponent) => { this.dialogComponent = dialogComponent; }}
+  >
+    <DialogContent>
+      <View>
+        <Text>Hello</Text>
+      </View>
+    </DialogContent>
+  </DialogComponent>
+</View>
+```
+
 ## Props
 
 ### DialogComponent
@@ -142,6 +167,11 @@ import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
 | `textContainerStyle` | `Object` or `Number` | | | |
 | `disabled` | `Boolean` | `false` | | |
 | `activeOpacity` | `Number` | | | |
+
+### DialogContent
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `contentStyle` | | | | |
 
 
 ## Animation
