@@ -96,7 +96,6 @@ const styles = StyleSheet.create({
     elevation: 5,
     minHeight: 96,
     borderRadius: 0,
-    opacity: 0,
     shadowColor: 'black',
     shadowOpacity: 0.2,
     shadowRadius: 5,
