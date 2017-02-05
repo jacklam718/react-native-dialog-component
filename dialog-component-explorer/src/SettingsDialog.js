@@ -66,7 +66,8 @@ export default class SettingsDialog extends Component {
   render() {
     return (
       <DialogComponent
-        title="Settings"
+        title="Settings To Preview The Effects"
+        titleTextStyle={styles.dialogTitleText}
         haveTitleBar
         width={0.8}
         height={0.6}
@@ -124,5 +125,8 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // right: 0,
     // left: 0,
+  },
+  dialogTitleText: {
+    fontSize: 16,
   },
 });
