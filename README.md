@@ -150,6 +150,12 @@ import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
 | `actions` | `Array` | | Array of `DialogButton` component for example: ```[<DialogButton text="CLOSE", align="center" onPress={this.closeDialog}/>]``` | |
 
 
+### DialogContent
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `contentStyle` | | | Dialog's content container| |
+
+
 ### DialogTitle
 | Prop | Type | Default | Note |
 |---|---|---|---|
@@ -171,11 +177,6 @@ import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
 | `textContainerStyle` | `Object` or `Number` | | | |
 | `disabled` | `Boolean` | `false` | | |
 | `activeOpacity` | `Number` | | | |
-
-### DialogContent
-| Prop | Type | Default | Note |
-|---|---|---|---|
-| `contentStyle` | | | | |
 
 
 ## Animation
