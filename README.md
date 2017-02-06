@@ -143,6 +143,7 @@ import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
 | `overlayBackgroundColor` | `String` | `#000` |
 | `overlayOpacity` | `Number` | `0.5` |
 | `closeOnTouchOutside` | `Bool` | `true` | When touch overlay will close dialog, but if `haveOverlay` is false then the `closeOnTouchOutside` won't work| |
+| `closeOnHardwareBackPress` | `Bool` | `true` | Only for Android | |
 | `haveOverlay` | `Bool` | `true` | If false won't show overlay while dialog open | |
 | `open` | `Bool` | `false` |  | |
 | `onOpened` | `Function` | | You can pass onOpend function as a aallback function, will call the function while dialog opened | |
