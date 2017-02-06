@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
+});
 
 function DialogContent({ children, contentStyle }) {
   return (
@@ -8,11 +14,5 @@ function DialogContent({ children, contentStyle }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-  },
-});
 
 export default DialogContent;

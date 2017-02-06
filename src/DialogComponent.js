@@ -1,31 +1,45 @@
 // @flow
 
-import React, { Component, PropTypes } from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import PopupDialog, { Dialog } from 'react-native-popup-dialog';
+import React, { Component } from 'react';
+import { StyleSheet, Dimensions } from 'react-native';
+import PopupDialog, { type DialogType } from 'react-native-popup-dialog';
 
 import DialogTitle from './components/DialogTitle';
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
+const { width: screenWidth } = Dimensions.get('window');
 
-const propTypes = {
-  ...Dialog.propTypes,
-  ...DialogTitle.propTypes,
-  dialogContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
-};
+const ANIMATION_DURATION: number = 200;
+const DEFAULT_WIDTH: number = screenWidth;
+const DEFAULT_HEIGHT: ?number = null;
 
-const defaultProps = {
-  animationDuration: 200,
-  closeOnTouchOutside: true,
-  width: screenWidth,
-  height: null,
-};
+const styles = StyleSheet.create({
+  dialog: {
+    elevation: 5,
+    minHeight: 96,
+    borderRadius: 0,
+    shadowColor: 'black',
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    shadowOffset: {
+      width: 1,
+      height: 2,
+    },
+  },
+  dialogContainer: {
+    flex: 1,
+  },
+});
 
 class DialogComponent extends Component {
-  static propTypes = propTypes;
-  static defaultProps = defaultProps;
+  props: DialogType
 
-  constructor(props) {
+  static defaultProps = {
+    animationDuration: ANIMATION_DURATION,
+    width: DEFAULT_WIDTH,
+    height: DEFAULT_HEIGHT,
+  }
+
+  constructor(props: DialogType) {
     super(props);
 
     this.openDialog = this.openDialog.bind(this);
@@ -68,7 +82,7 @@ class DialogComponent extends Component {
 
     return (
       <PopupDialog
-        ref={popupDialog => { this.popupDialog = popupDialog; }}
+        ref={(popupDialog) => { this.popupDialog = popupDialog; }}
         width={this.props.width}
         height={this.props.height}
         dialogAnimation={this.props.dialogAnimation}
@@ -90,23 +104,5 @@ class DialogComponent extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  dialog: {
-    elevation: 5,
-    minHeight: 96,
-    borderRadius: 0,
-    shadowColor: 'black',
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-    shadowOffset: {
-      width: 1,
-      height: 2,
-    },
-  },
-  dialogContainer: {
-    flex: 1,
-  },
-});
 
 export default DialogComponent;

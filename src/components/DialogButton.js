@@ -2,22 +2,30 @@
 
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import * as PopupDialog from 'react-native-popup-dialog';
+import {
+  DialogButton as PopupDialogButton,
+  type DialogButtonType as PopupDialogButtonType,
+} from 'react-native-popup-dialog';
 
-type Param = {
-  text: string;
-  align: string;
-  onPress: Function;
-  buttonStyle: Object | number;
-  textStyle: Object | number;
-  textContainerStyle: Object | number;
-  disabled: Boolean;
-  activeOpacity: number;
-};
+const styles = StyleSheet.create({
+  textContainerStyle: {
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+  },
+});
 
-function DialogButton({ text, align, onPress, buttonStyle, textStyle, textContainerStyle, disabled, activeOpacity }: Param) {
+function DialogButton({
+  text,
+  align,
+  onPress,
+  buttonStyle,
+  textStyle,
+  textContainerStyle,
+  disabled,
+  activeOpacity,
+}: PopupDialogButtonType) {
   return (
-    <PopupDialog.DialogButton
+    <PopupDialogButton
       text={text}
       align={align}
       onPress={onPress}
@@ -29,12 +37,5 @@ function DialogButton({ text, align, onPress, buttonStyle, textStyle, textContai
     />
   );
 }
-
-const styles = StyleSheet.create({
-  textContainerStyle: {
-    paddingHorizontal: 20,
-    paddingVertical: 20,
-  },
-});
 
 export default DialogButton;
