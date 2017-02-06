@@ -1,0 +1,6 @@
+{
+  "presets": [
+    "es2016",
+    "react-native"
+  ]
+}
