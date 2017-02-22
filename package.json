@@ -28,9 +28,10 @@
   "license": "MIT",
   "homepage": "https://github.com/jacklam718/react-native-popup-dialog/blob/master/README.md",
   "dependencies": {
-    "react-native-popup-dialog": "^0.5.18",
     "babel-preset-es2016": "^6.22.0",
-    "babel-preset-react-native": "^1.9.1"
+    "babel-preset-react-native": "^1.9.1",
+    "react-native-popup-dialog": "^0.5.18",
+    "react-native-root-siblings": "^1.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
