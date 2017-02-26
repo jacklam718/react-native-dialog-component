@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import DialogComponent, { DialogContent } from 'react-native-dialog-component';
+import { DialogComponent, DialogContent } from 'react-native-dialog-component';
 
 import Button from '../components/Button';
 
 export default class AutoDialogSize extends Component {
 
-  openDialogA = () => {
-    this.dialogA.openDialog();
+  showA = () => {
+    this.dialogA.show();
   }
 
-  openDialogB = () => {
-    this.dialogB.openDialog();
+  showB = () => {
+    this.dialogB.show();
   }
 
   render() {
@@ -20,12 +20,12 @@ export default class AutoDialogSize extends Component {
         <View style={{ flex: 1, alignItems: 'center' }}>
           <Button
             text="Open Dialog A"
-            onPress={this.openDialogA}
+            onPress={this.showA}
           />
 
           <Button
             text="Open Dialog B"
-            onPress={this.openDialogB}
+            onPress={this.showB}
           />
         </View>
 

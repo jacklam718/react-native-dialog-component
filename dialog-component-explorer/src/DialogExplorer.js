@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { View, ScrollView, StyleSheet, Text } from 'react-native';
-import DialogComponent from 'react-native-dialog-component';
+import { DialogComponent } from 'react-native-dialog-component';
 
 import Button from './components/Button';
 
@@ -17,7 +17,7 @@ export default class DialogExplorer extends Component {
             <Button
               style={styles.buttonStyle}
               text="Open Dialog"
-              onPress={this.props.openDialog}
+              onPress={this.props.showDialog}
             />
           </View>
         </ScrollView>

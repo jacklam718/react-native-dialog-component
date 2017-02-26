@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import DialogComponent, { DialogContent } from 'react-native-dialog-component';
+import { DialogComponent, DialogContent } from 'react-native-dialog-component';
 import _ from 'lodash';
 
 import SettingsDialogTitle from './components/SettingsDialogTitle';
@@ -31,12 +31,12 @@ export default class SettingsDialog extends Component {
     return (!_.isEqual(this.state, nextState));
   }
 
-  openDialog = () => {
-    this.dialog.openDialog();
+  show = () => {
+    this.dialog.show();
   }
 
-  clsoeDialog = () => {
-    this.dialog.clsoeDialog();
+  dismiss = () => {
+    this.dialog.dismiss();
   }
 
   onDialogSizeSettingsUpdated(settings) {

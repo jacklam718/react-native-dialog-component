@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Navigator, TouchableOpacity, StyleSheet, Text } from 'react-native';
-import DialogComponent, { DialogContent } from 'react-native-dialog-component';
+import { DialogComponent, DialogContent } from 'react-native-dialog-component';
 import _ from 'lodash';
 
 import DialogExplorer from './DialogExplorer';
@@ -19,8 +19,8 @@ export default class EXNavigator extends Component {
 
     this.renderScene = this.renderScene.bind(this);
     this.onUpdateSettings = this.onUpdateSettings.bind(this);
-    this.openSettingsDialog = this.openSettingsDialog.bind(this);
-    this.openDialogComponent = this.openDialogComponent.bind(this);
+    this.showSettingsDialog = this.showSettingsDialog.bind(this);
+    this.showDialog = this.showDialog.bind(this);
   }
 
   onUpdateSettings(dialogSettings) {
@@ -30,12 +30,12 @@ export default class EXNavigator extends Component {
     } });
   }
 
-  openDialogComponent() {
-    this.dialogComponent.openDialog();
+  showDialog() {
+    this.dialogComponent.show();
   }
 
-  openSettingsDialog() {
-    this.settingsDialog.openDialog();
+  showSettingsDialog() {
+    this.settingsDialog.show();
   }
 
   configureScene() {
@@ -52,7 +52,7 @@ export default class EXNavigator extends Component {
     return (
       <DialogExplorer
         navigator={navigator}
-        openDialog={this.openDialogComponent}
+        showDialog={this.showDialog}
       />
     );
   }
@@ -82,7 +82,7 @@ export default class EXNavigator extends Component {
               return (
                 <TouchableOpacity
                   style={[styles.navigationButton, styles.navigationLeftButton]}
-                  onPress={this.openSettingsDialog}
+                  onPress={this.showSettingsDialog}
                 >
                   <Text>
                     Settings
@@ -92,7 +92,7 @@ export default class EXNavigator extends Component {
             }
             return null;
           },
-          Title: (route) => (
+          Title: route => (
             <Text style={styles.navigationTitle}>
               {route.title}
             </Text>
@@ -136,7 +136,7 @@ export default class EXNavigator extends Component {
         <SettingsDialog
           // {...this.state}
           onSettingsUpdated={this.onUpdateSettings}
-          onViewSettings={this.openViewSettingsDialog}
+          onViewSettings={this.showViewSettingsDialog}
           ref={(settingsDialog) => {
             this.settingsDialog = settingsDialog;
           }}
