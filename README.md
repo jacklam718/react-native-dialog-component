@@ -23,25 +23,79 @@ yarn add react-native-dialog-component
 
 ## Exposed Modules
 
-1. Dialog
+1. DialogManager
 2. DialogComponent
-3. DialogContent
-4. DialogButton
-5. DialogTitle
-6. Overlay
-7. Animation
-8. DefaultAnimation
-9. ScaleAnimation
-10. SlideAnimation
+3. Dialog
+4. DialogContent
+5. DialogButton
+6. DialogTitle
+7. Overlay
+8. Animation
+9. DefaultAnimation
+10. ScaleAnimation
+11. SlideAnimation
 
 
 ## Examples
 [Example](https://github.com/jacklam718/react-native-dialog-component/blob/master/dialogComponentExample/DialogComponentExample.js)
 
 
-## Usage
+## Usage With `DialogManager`
 ```javascript
-import DialogComponent from 'react-native-dialog-component';
+import DialogManager, { ScaleAnimation, DialogContent } from 'react-native-dialog-component';
+
+// show dialog
+DialogManager.show({
+  title: 'Dialog',
+  titleAlign: 'center',
+  animationDuration: 200,
+  ScaleAnimation: new ScaleAnimation(),
+  children: (
+    <DialogContent>
+      <View>
+        <Text>
+          React Native Dialog Component
+        </Text>
+      </View>
+    </DialogContent>
+  ),
+}, () => {
+  console.log('callback - show');
+});
+
+// update dialog
+DialogManager.update({
+  title: 'Dialog Updated',
+  titleAlign: 'center',
+  animationDuration: 200,
+  ScaleAnimation: new ScaleAnimation(),
+  children: (
+    <DialogContent>
+      <View>
+        <Text>
+          New Content
+        </Text>
+      </View>
+    </DialogContent>
+  ),
+}, () => {
+  console.log('callback - update dialog');
+});
+
+// dismiss dialog
+DialogManager.dismiss(() => {
+  console.log('callback - dismiss');
+});
+
+// dismiss all
+DialogManager.dismissAll(() => {
+  console.log('callback - dismiss all');
+});
+```
+
+## Usage with `DialogComponent`
+```javascript
+import { DialogComponent }from 'react-native-dialog-component';
 
 <View style={styles.container}>
   <Button
@@ -62,7 +116,7 @@ import DialogComponent from 'react-native-dialog-component';
 
 ## Usage - With Animation
 ```javascript
-import DialogComponent, { SlideAnimation } from 'react-native-dialog-component';
+import { DialogComponent, SlideAnimation } from 'react-native-dialog-component';
 
 <View style={styles.container}>
   <Button
@@ -84,7 +138,7 @@ import DialogComponent, { SlideAnimation } from 'react-native-dialog-component';
 
 ## Usage - With Dialog Dialog Title
 ```javascript
-import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
+import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 
 <View style={styles.container}>
   <Button
@@ -106,7 +160,7 @@ import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
 
 ## Usage - Wrape the content use DialogContent
 ```javascript
-import DialogComponent, { DialogTitle } from 'react-native-dialog-component';
+import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 
 <View style={styles.container}>
   <Button
