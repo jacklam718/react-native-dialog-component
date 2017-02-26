@@ -43,8 +43,10 @@ yarn add react-native-dialog-component
 ## Usage With `DialogManager`
 ```javascript
 import DialogManager, { ScaleAnimation, DialogContent } from 'react-native-dialog-component';
+```
 
-// show dialog
+#### show
+```javascript
 DialogManager.show({
   title: 'Dialog',
   titleAlign: 'center',
@@ -62,8 +64,10 @@ DialogManager.show({
 }, () => {
   console.log('callback - show');
 });
+```
 
-// update dialog
+#### update
+```javascript
 DialogManager.update({
   title: 'Dialog Updated',
   titleAlign: 'center',
@@ -81,13 +85,18 @@ DialogManager.update({
 }, () => {
   console.log('callback - update dialog');
 });
+```
 
+#### dismiss
+```javascript
 // dismiss dialog
 DialogManager.dismiss(() => {
   console.log('callback - dismiss');
 });
+```
 
-// dismiss all
+#### dismiss all
+```javascript
 DialogManager.dismissAll(() => {
   console.log('callback - dismiss all');
 });
