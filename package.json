@@ -1,6 +1,6 @@
 {
   "name": "react-native-dialog-component",
-  "version": "0.0.8",
+  "version": "0.1.8",
   "description": "React Native Dialog Component for IOS & Android.",
   "main": "index.js",
   "scripts": {
