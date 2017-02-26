@@ -42,16 +42,16 @@ class DialogComponent extends Component {
   constructor(props: DialogType) {
     super(props);
 
-    this.openDialog = this.openDialog.bind(this);
-    this.closeDialog = this.closeDialog.bind(this);
+    this.show = this.show.bind(this);
+    this.dismiss = this.dismiss.bind(this);
   }
 
-  openDialog(onOpened) {
-    this.popupDialog.openDialog(onOpened);
+  show(onShowed) {
+    this.popupDialog.show(onShowed);
   }
 
-  closeDialog(onClosed) {
-    this.popupDialog.closeDialog(onClosed);
+  dismiss(onDismissed) {
+    this.popupDialog.dismiss(onDismissed);
   }
 
   render() {
@@ -91,11 +91,11 @@ class DialogComponent extends Component {
         overlayPointerEvents={this.props.overlayPointerEvents}
         overlayBackgroundColor={this.props.overlayBackgroundColor}
         overlayOpacity={this.props.overlayOpacity}
-        closeOnTouchOutside={this.props.closeOnTouchOutside}
+        dismissOnTouchOutside={this.props.dismissOnTouchOutside}
         haveOverlay={this.props.haveOverlay}
-        open={this.props.open}
-        onOpened={this.props.onOpened}
-        onClosed={this.props.onClosed}
+        show={this.props.show}
+        onShowed={this.props.onShowed}
+        onDismissed={this.props.onDismissed}
         actions={this.props.actions}
       >
         {title}
