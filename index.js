@@ -8,7 +8,7 @@ import {
   SlideAnimation,
 } from 'react-native-popup-dialog';
 
-// react-native-dialog-component
+import DialogManager from './src/DialogManager';
 import DialogComponent from './src/DialogComponent';
 import DialogTitle from './src/components/DialogTitle';
 import DialogContent from './src/components/DialogContent';
@@ -24,6 +24,7 @@ export {
   DefaultAnimation,
   ScaleAnimation,
   SlideAnimation,
+  DialogComponent,
 };
 
-export default DialogComponent;
+export default new DialogManager();
