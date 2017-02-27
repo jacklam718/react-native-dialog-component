@@ -1,6 +1,8 @@
 ## React Native Dialog Component
 React Native Dialog Component for iOS & Android.
 
+Pull request are welcomed. Please follow [Airbnb JS Style Guide](https://github.com/airbnb/javascript)
+
 #### Preview
 <img src="https://jacklam718.github.io/react-native-dialog-component/resources/react-native-dialog-component.gif" width="300">
 <br>
@@ -262,15 +264,3 @@ import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 |---|---|---|---|
 | `toValue` | Number | 0 | |
 | `slideFrom` | String | `bottom` | Available option: `top`, `bottom`, `left`, `right` |
-
-
-## Welcome Become a Contributor 😃 👍
-### I'm welcome anyone become a contributor.
-
-### You must follow style guide.
-  * [JavaScript](https://github.com/airbnb/javascript)
-  * [React](https://github.com/airbnb/javascript/tree/master/react)
-  * Use 2 spaces indentation
-
-### Additional, I recommend you use linter.
-  * [Configure Text Editors](https://github.com/kriasoft/react-starter-kit/blob/master/docs/how-to-configure-text-editors.md)
