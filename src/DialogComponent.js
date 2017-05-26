@@ -91,6 +91,7 @@ class DialogComponent extends Component {
         overlayPointerEvents={this.props.overlayPointerEvents}
         overlayBackgroundColor={this.props.overlayBackgroundColor}
         overlayOpacity={this.props.overlayOpacity}
+        dismissOnHardwareBackPress={this.props.dismissOnHardwareBackPress}
         dismissOnTouchOutside={this.props.dismissOnTouchOutside}
         haveOverlay={this.props.haveOverlay}
         show={this.props.show}
