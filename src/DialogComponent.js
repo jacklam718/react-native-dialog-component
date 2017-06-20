@@ -46,8 +46,8 @@ class DialogComponent extends Component {
     this.dismiss = this.dismiss.bind(this);
   }
 
-  show(onShowed) {
-    this.popupDialog.show(onShowed);
+  show(onShown) {
+    this.popupDialog.show(onShown);
   }
 
   dismiss(onDismissed) {
@@ -95,7 +95,7 @@ class DialogComponent extends Component {
         dismissOnTouchOutside={this.props.dismissOnTouchOutside}
         haveOverlay={this.props.haveOverlay}
         show={this.props.show}
-        onShowed={this.props.onShowed}
+        onShown={this.props.onShown}
         onDismissed={this.props.onDismissed}
         actions={this.props.actions}
       >

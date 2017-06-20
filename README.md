@@ -211,7 +211,7 @@ import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 | `dismissOnHardwareBackPress` | `Bool` | `true` | Only for Android | |
 | `haveOverlay` | `Bool` | `true` | If false won't show overlay when dialog show | |
 | `show` | `Bool` | `false` |  | |
-| `onShowed` | `Function` | | You can pass onShowed function as a aallback function, will call the function while dialog showed | |
+| `onShown` | `Function` | | You can pass onShown function as a aallback function, will call the function while dialog shown | |
 | `onDismissed` | `Function` | | You can pass onDismissed function as a callback function, will call the function while dialog dismissed | |
 | `actions` | `Array` | | Array of `DialogButton` component for example: ```[<DialogButton text="DISMISS", align="center" onPress={this.dismissDialog}/>]``` | |
 
