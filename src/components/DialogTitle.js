@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   titleTextStyle: {
-    fontSize: normalize(20),
+    fontSize: normalize(17),
     lineHeight: normalize(23),
   },
 });
