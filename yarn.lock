@@ -2784,9 +2784,9 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
-react-native-popup-dialog@^0.9.29:
-  version "0.9.29"
-  resolved "https://registry.yarnpkg.com/react-native-popup-dialog/-/react-native-popup-dialog-0.9.29.tgz#55b25653ac6d37c16982e26901a9bd20f0f1cf84"
+react-native-popup-dialog@^0.9.30:
+  version "0.9.30"
+  resolved "https://registry.yarnpkg.com/react-native-popup-dialog/-/react-native-popup-dialog-0.9.30.tgz#280304776a52a564ee14a5bc95f3412fba64b4dd"
   dependencies:
     babel-plugin-flow-react-proptypes "^2.0.0"
     babel-preset-es2016 "^6.22.0"
