@@ -201,7 +201,7 @@ import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 | `dialogTitle` | `React Element` | | You can pass a `DialogTitle` component or pass a `View` for customizing titlebar |
 | `width` | `Number` | Your device width | The Width of Dialog, you can use fixed width or use percentage
 | `height` | `Number` | 300 | The Width of Dialog, you can use fixed height or use percentage
-| `dialogAnimation` |  | `DefaultAnimation` | animation for dialog | |
+| `dialogAnimation` |  | `FadeAnimation` | animation for dialog | |
 | `dialogStyle` | `Object` or `Number` | | | |
 | `animationDuration` | `Number` | `200` | | |
 | `overlayPointerEvents` | `String` | | Available option: `auto`, `none` |
@@ -248,7 +248,7 @@ import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 ## Animation
 ### Params for (*)Animation
 
-### DefaultAnimation
+### FadeAnimation
 | Param | Type | Default | Note |
 |---|---|---|---|
 | `toValue` | Number | 0 | |
