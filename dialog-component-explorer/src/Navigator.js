@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Navigator, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components';
 import { DialogComponent, DialogContent } from 'react-native-dialog-component';
 import _ from 'lodash';
 
