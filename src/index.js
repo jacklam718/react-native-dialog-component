@@ -3,16 +3,16 @@ import {
   Overlay,
   Dialog,
   Animation,
-  DefaultAnimation,
+  FadeAnimation,
   ScaleAnimation,
   SlideAnimation,
 } from 'react-native-popup-dialog';
 
-import DialogManager from './src/DialogManager';
-import DialogComponent from './src/DialogComponent';
-import DialogTitle from './src/components/DialogTitle';
-import DialogContent from './src/components/DialogContent';
-import DialogButton from './src/components/DialogButton';
+import DialogManager from './DialogManager';
+import DialogComponent from './DialogComponent';
+import DialogTitle from './components/DialogTitle';
+import DialogContent from './components/DialogContent';
+import DialogButton from './components/DialogButton';
 
 export {
   Overlay,
@@ -21,7 +21,7 @@ export {
   DialogContent,
   Dialog,
   Animation,
-  DefaultAnimation,
+  FadeAnimation,
   ScaleAnimation,
   SlideAnimation,
   DialogComponent,

@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-import PopupDialog, { type DialogType } from 'react-native-popup-dialog';
+import PopupDialog from 'react-native-popup-dialog';
+import type { DialogType } from 'react-native-popup-dialog';
 
 import DialogTitle from './components/DialogTitle';
 

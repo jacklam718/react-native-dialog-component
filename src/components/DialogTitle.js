@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-import {
-  DialogTitle as PopupDialogTitle,
-  type DialogTitleType as PopupDialogTitleType,
-} from 'react-native-popup-dialog';
+import { DialogTitle as PopupDialogTitle } from 'react-native-popup-dialog';
+import type { DialogTitleType as PopupDialogTitleType } from 'react-native-popup-dialog';
 
 const scale = Dimensions.get('window').width / 375;
 
