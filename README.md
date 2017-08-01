@@ -25,17 +25,17 @@ yarn add react-native-dialog-component
 
 ## Exposed Modules
 
-1. DialogManager
-2. DialogComponent
-3. Dialog
-4. DialogContent
-5. DialogButton
-6. DialogTitle
-7. Overlay
-8. Animation
-9. DefaultAnimation
-10. ScaleAnimation
-11. SlideAnimation
+* DialogManager
+* DialogComponent
+* Dialog
+* DialogContent
+* DialogButton
+* DialogTitle
+* Overlay
+* Animation
+* FadeAnimation
+* ScaleAnimation
+* SlideAnimation
 
 
 ## Examples
