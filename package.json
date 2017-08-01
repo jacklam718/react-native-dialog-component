@@ -1,6 +1,6 @@
 {
   "name": "react-native-dialog-component",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "description": "React Native Dialog Component for IOS & Android.",
   "main": "dist/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react-native": "^2.1.0",
     "prop-types": "^15.5.10",
-    "react-native-popup-dialog": "^0.9.31",
+    "react-native-popup-dialog": "^0.9.32",
     "react-native-root-siblings": "^1.1.2"
   },
   "devDependencies": {

@@ -10,6 +10,6 @@
     "react": "16.0.0-alpha.12",
     "react-native": "https://github.com/expo/react-native/archive/sdk-19.0.0.tar.gz",
     "react-native-deprecated-custom-components": "^0.1.1",
-    "react-native-dialog-component": "file:///Users/jacklam/workspace/react-native-dialog-component"
+    "react-native-dialog-component": ".."
   }
 }

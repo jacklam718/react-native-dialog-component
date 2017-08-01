@@ -2,7 +2,8 @@
 
 import React, { Component, PropTypes } from 'react';
 import { View, Text, Slider, Switch, Dimensions, Picker, StyleSheet } from 'react-native';
-import { DefaultAnimation, ScaleAnimation, SlideAnimation } from 'react-native-dialog-component';
+import { FadeAnimation, ScaleAnimation, SlideAnimation } from 'react-native-dialog-component';
+import * as m from 'react-native-dialog-component';
 import _ from 'lodash';
 import Section from './Section';
 
@@ -13,7 +14,7 @@ type Props = {
   dialogAnimation: Object;
   selectedDialogAnimation: string;
 };
-
+console.log('FadeAnimation: ', m);
 export default class SettingsDialogAnimation extends Component {
   props: Props;
 
@@ -45,7 +46,7 @@ export default class SettingsDialogAnimation extends Component {
 
     switch (value) {
       case 'default':
-        dialogAnimation = new DefaultAnimation();
+        dialogAnimation = new FadeAnimation({ animationDuration: 150 });
         break;
       case 'scale':
         dialogAnimation = new ScaleAnimation();
@@ -54,7 +55,7 @@ export default class SettingsDialogAnimation extends Component {
         dialogAnimation = new SlideAnimation({ slideFrom: 'top' });
         break;
       default:
-        dialogAnimation = new DefaultAnimation();
+        dialogAnimation = new FadeAnimation({ animationDuration: 150 });
         break;
     }
 
@@ -73,7 +74,7 @@ export default class SettingsDialogAnimation extends Component {
             selectedValue={this.state.selectedDialogAnimation}
             onValueChange={this.dialogAnimationPickerChange}
           >
-            <Picker.Item label="default animation" value="default" />
+            <Picker.Item label="fade animation" value="fade" />
             <Picker.Item label="scale animation" value="scale" />
             <Picker.Item label="slide animation" value="slide" />
           </Picker>
