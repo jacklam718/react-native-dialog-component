@@ -33,7 +33,7 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react-native": "^3.0.1",
     "prop-types": "^15.5.10",
-    "react-native-popup-dialog": "^0.9.34",
+    "react-native-popup-dialog": "^0.9.35",
     "react-native-root-siblings": "^1.1.2"
   },
   "devDependencies": {
