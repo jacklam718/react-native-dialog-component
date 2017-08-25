@@ -14,7 +14,7 @@ type Props = {
   dialogAnimation: Object;
   selectedDialogAnimation: string;
 };
-console.log('FadeAnimation: ', m);
+
 export default class SettingsDialogAnimation extends Component {
   props: Props;
 
