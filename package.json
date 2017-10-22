@@ -1,6 +1,6 @@
 {
   "name": "react-native-dialog-component",
-  "version": "0.2.16",
+  "version": "0.2.17",
   "description": "React Native Dialog Component for IOS & Android.",
   "main": "dist/index.js",
   "scripts": {
@@ -30,23 +30,25 @@
   "license": "MIT",
   "homepage": "https://github.com/jacklam718/react-native-popup-dialog/blob/master/README.md",
   "dependencies": {
-    "babel-preset-es2016": "^6.24.1",
-    "babel-preset-react-native": "^3.0.1",
-    "prop-types": "^15.5.10",
-    "react-native-popup-dialog": "^0.9.35",
-    "react-native-root-siblings": "^1.1.2"
+    "babel-preset-env": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "prop-types": "^15.6.0",
+    "react-native-popup-dialog": "^0.9.38",
+    "react-native-root-siblings": "^1.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-flow-react-proptypes": "^5.1.1",
-    "eslint": "^4.5.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-import": "^2.7.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-flow-react-proptypes": "^6.1.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
-    "flow-bin": "^0.53.1",
-    "react": "^15.6.1",
-    "react-native": "^0.47.2",
-    "rimraf": "^2.6.1"
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.57.3",
+    "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   }
 }
