@@ -3251,11 +3251,12 @@ react-native-popup-dialog@^0.9.35:
     babel-plugin-flow-react-proptypes "^5.1.1"
     prop-types "^15.5.8"
 
-react-native-root-siblings@^1.1.2:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-root-siblings/-/react-native-root-siblings-1.2.1.tgz#6f8d0e711dbf9aef4e57e73aea751372b5aefcff"
+react-native-root-siblings@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-root-siblings/-/react-native-root-siblings-2.0.0.tgz#ac00884e69372ce43476458529a7b1777e8ac67f"
   dependencies:
     static-container "^1.0.0"
+    wolfy87-eventemitter "^5.2.2"
 
 react-native@^0.47.2:
   version "0.47.2"
@@ -4130,6 +4131,10 @@ wide-align@^1.1.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
+
+wolfy87-eventemitter@^5.2.2:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/wolfy87-eventemitter/-/wolfy87-eventemitter-5.2.3.tgz#e09979b4e7d8d5256e3a25e811529ba143115568"
 
 wordwrap@0.0.2:
   version "0.0.2"
