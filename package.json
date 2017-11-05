@@ -34,7 +34,7 @@
     "babel-preset-react-native": "^3.0.1",
     "prop-types": "^15.5.10",
     "react-native-popup-dialog": "^0.9.35",
-    "react-native-root-siblings": "^1.1.2"
+    "react-native-root-siblings": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
