@@ -147,7 +147,7 @@ import { DialogComponent, SlideAnimation } from 'react-native-dialog-component';
 </View>
 ```
 
-## Usage - With Dialog Dialog Title
+## Usage - With Dialog Title
 ```javascript
 import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 
@@ -159,7 +159,7 @@ import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
     }}
   />
   <DialogComponent
-    dialogTitle={<DialogTitle title="Dialog Title" />}
+    title={<DialogTitle title="Dialog Title" />}
     ref={(dialogComponent) => { this.dialogComponent = dialogComponent; }}
   >
     <View>
@@ -198,7 +198,7 @@ import { DialogComponent, DialogTitle } from 'react-native-dialog-component';
 ### DialogComponent
 | Prop | Type | Default | Note |
 |---|---|---|---|
-| `dialogTitle` | `React Element` | | You can pass a `DialogTitle` component or pass a `View` for customizing titlebar |
+| `title` | `React Element` | | You can pass a `DialogTitle` component or pass a `View` for customizing titlebar |
 | `width` | `Number` | Your device width | The Width of Dialog, you can use fixed width or use percentage
 | `height` | `Number` | 300 | The Width of Dialog, you can use fixed height or use percentage
 | `dialogAnimation` |  | `FadeAnimation` | animation for dialog | |
